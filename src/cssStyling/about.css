@@ -1,0 +1,59 @@
+.about-me {
+    padding: 80px 40px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 60px auto;
+    max-width: 1000px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-me {
+    color: var(--secondary-color);
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.my-self {
+    font-size: 1.25em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-me div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me img {
+    max-width: 350px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-me img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.5);
+}
+
+@media (max-width: 768px) {
+    .info-me {
+        font-size: 2.5em;
+    }
+
+    .about-me {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+}

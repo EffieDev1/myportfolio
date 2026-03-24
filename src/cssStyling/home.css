@@ -1,0 +1,101 @@
+.home-content {
+    min-height: 90vh;
+    margin: 40px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+
+.header-sect {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header1 {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 64px;
+    margin: 0;
+    line-height: 1;
+}
+
+.header2 {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 58px;
+    margin: 10px 0 30px;
+    background: linear-gradient(90deg, var(--primary-color), #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#welcome {
+    flex: 1;
+    max-width: 500px;
+    aspect-ratio: 1/1.2;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.5s ease;
+}
+
+#welcome:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+#welcome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+@media (max-width: 900px) {
+    .home-page {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .header1,
+    .header2 {
+        font-size: 40px;
+    }
+
+    .home-content {
+        margin: 20px;
+        padding: 30px;
+    }
+}
